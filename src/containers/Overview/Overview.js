@@ -92,8 +92,17 @@ function Overview() {
                     {activitiesToday.map((activity)=> 
                         <TodayItem>
                             <TodayLeft>
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g opacity="0.5">
+                            <rect width="25" height="25" fill="white"/>
+                            <path d="M4.05738 11.145L20.6495 7.21527L14.101 22.4952L11.9818 14.8662L11.9187 14.6389L11.7031 14.5431L4.05738 11.145Z" stroke="black"/>
+                            <line x1="11.6805" y1="14.4084" x2="19.857" y2="7.61541" stroke="black"/>
+                            </g>
+                        </svg>
+                        <div style={{marginLeft : "20px"}}>
                                 <Name>{activity.to}</Name>
                                 <Type>{activity.type}</Type>
+                        </div>
                             </TodayLeft>
                             <TodayRight>
                                 {activity.sold}
@@ -104,8 +113,18 @@ function Overview() {
                     {activitiesYesterday.map((activity)=> 
                         <TodayItem>
                             <TodayLeft>
+                            <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.5">
+                                <rect width="25" height="25" fill="white"/>
+                                <rect x="2.5" y="6.5" width="20" height="13" stroke="black"/>
+                                <line x1="3" y1="10.5" x2="23" y2="10.5" stroke="black"/>
+                                <line x1="4" y1="16.5" x2="11" y2="16.5" stroke="black"/>
+                                </g>
+                            </svg>
+                            <div style={{marginLeft : "20px"}}>
                                 <Name>{activity.to}</Name>
                                 <Type>{activity.type}</Type>
+                            </div>
                             </TodayLeft>
                             <TodayRight>
                                 {activity.sold}
@@ -121,15 +140,14 @@ function Overview() {
 
 export default Overview
 
+
 const CardsContainer = styled.div`
     display : flex;
     margin : 20px 0;
 `
 const ContentContainer = styled.div`
     display : flex;
-    margin : 20px 0;
     padding : 20px 0;
-
 `
 
 const Right = styled.div`
@@ -253,8 +271,7 @@ const TodayItem = styled.div`
 `
 const TodayLeft = styled.div`
     display : flex;
-    flex-direction : column;
-
+    flex-direction : row;
 `
 
 const Name = styled.div`

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import image from "../../assets/images/Dribbble shot - 1.png"
-import imageActive from "../../assets/images/Dribbble shot - 1-1.png"
+import imageActive from "../../assets/images/fondActive.png"
 
 function Card({sold , number, cvc}) {
     return (

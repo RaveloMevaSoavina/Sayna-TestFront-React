@@ -21,7 +21,7 @@ export default HeaderTitle
 
 const Header = styled.h2`
     color : #313874;
-    margin : 20px 0 20px 0;
+    margin :  0 ;
     font-size : 1.3rem;
 `
 

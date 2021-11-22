@@ -14,19 +14,22 @@ function SideBar() {
             </Logo>
             <MenuContainer>
                 <div>
-            {menu.map(({id, label , icon})=>{
-                return(
-                    <Item key={id}>{icon}{label}</Item>
-                )
-            })}
-            </div>
-            <div>
-            {footMenu.map(({id, label , icon})=>{
-                return(
-                    <Item key={id}>{label}</Item>
-                )
-            })}
-            </div>
+                    {menu.map(({id, label , icon})=>{
+                        return(
+                            <Item key={id}>
+                                <ItemItem>{icon}</ItemItem>
+                                <ItemItem>{label}</ItemItem>
+                            </Item>
+                        )
+                    })}
+                </div>
+                <div style={{marginBottom : "70px", padding : "0 auto"}}>
+                {footMenu.map(({id, label , icon})=>{
+                    return(
+                        <Item key={id}>{label}</Item>
+                    )
+                })}
+                </div>
             </MenuContainer>
             
         </Container>
@@ -37,9 +40,10 @@ export default SideBar
 
 
 const Container = styled.div`
-    width : 400px;
-    height : 95vh;
-    padding : 20px 20px;
+    width : 200px;
+    height : 100vh;
+    padding-bottom : 100px;
+    padding : 40px 20px;
     background-color : #FFF;
     display : flex;
     flex-direction: column;
@@ -52,6 +56,8 @@ const Item = styled.div`
     width : 100%:
     font-size : 1.4rem;
     cursor : pointer;
+    display : flex;
+    align-items : center;
 `
 
 const Logo = styled.div`
@@ -64,9 +70,13 @@ const Logo = styled.div`
 `
 
 const MenuContainer = styled.div`
+    height : 100%;
     display : flex;
-    flex : 1;
     flex-direction : column;
     justify-content : space-between;
     margin-top : 20px;
+`
+
+const ItemItem = styled.div`
+    margin : 0 10px;
 `
